@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+
+        android:id="@+id/avatar_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/content_mail"
+        app:layout_constraintEnd_toStartOf="@+id/content_mail"
+        app:layout_constraintTop_toTopOf="@+id/title_mail"
+        app:layout_constraintVertical_bias="0.38"
+        app:shapeAppearanceOverlay="@style/circular"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/title_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Title"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/content_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxWidth="250dp"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="@+id/title_mail"
+        app:layout_constraintTop_toBottomOf="@+id/title_mail" />
+
+    <TextView
+        android:id="@+id/time_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/title_mail"
+        app:layout_constraintStart_toEndOf="@+id/title_mail"
+        app:layout_constraintTop_toTopOf="@+id/title_mail"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <CheckBox
+        android:id="@+id/star_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="4dp"
+        android:button="@drawable/star_checkbox"
+        app:layout_constraintBottom_toBottomOf="@+id/content_mail"
+        app:layout_constraintStart_toEndOf="@+id/content_mail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
